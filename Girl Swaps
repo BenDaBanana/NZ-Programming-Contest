@@ -1,0 +1,14 @@
+girls = ["Ruby", "jo", "fiona", "Phoebe", "Angela", "Sophia"]
+
+numbers = ["1 3", "2 6", "4 1"]
+
+for i in range(len(numbers)):
+    pair = numbers[i].split()
+    Num1 = int(pair[0])
+    Num2 = int(pair[1])
+
+    girls[Num1-1], girls[Num2-1] = girls[Num2-1], girls[Num1-1]
+    
+
+for girl in girls:
+    print(girl)
