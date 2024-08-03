@@ -1,0 +1,22 @@
+
+numbers = ["2 6", "9 4", "5 2"]
+card = 'n'
+turn = 0
+
+#for i in range(len(numbers)):
+def rollchecker(numbers,card, turn):
+    pair = numbers[turn].split()
+    Num1 = int(pair[0])
+    Num2 = int(pair[1])
+    if Num1 == Num2:
+        print(f'Doubles. Move forwards {Num1+Num2} squares')
+    elif turn == 2:
+        if card == 'y':
+            print(f'Use card. Move forwards {Num1+Num2} squares')
+        else:
+            print(f'$50 fine. Move forwards {Num1+Num2} squares')
+    elif turn < 2:
+        rollchecker(numbers,card,turn+1)
+
+rollchecker(numbers,card,turn)
+
