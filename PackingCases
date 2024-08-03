@@ -1,0 +1,24 @@
+boxes = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
+print (max(boxes))
+while len(boxes) > 0:
+    unit = []           
+    lastNumber = boxes[0]  
+    unit.append(lastNumber) 
+    unitIndex = []
+
+
+    for i in range(1, len(boxes)):  
+        if lastNumber > boxes[i]:
+            unit.append(boxes[i])
+            unitIndex.append(i)
+            lastNumber = boxes[i] 
+
+    for i in unit:
+        print(i, end= ' ')
+    print()
+    for index in reversed(unitIndex): 
+        boxes.pop(index)
+
+ 
+    boxes.pop(0)
+
