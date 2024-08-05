@@ -1,4 +1,5 @@
-boxes = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
+boxes = [3, 1, 3, 2, 2, 2, 1, 4, 1, 1]
+boxes.sort(reverse=True)
 print (max(boxes))
 while len(boxes) > 0:
     unit = []           
@@ -21,4 +22,3 @@ while len(boxes) > 0:
 
  
     boxes.pop(0)
-
