@@ -1,0 +1,69 @@
+
+/**
+ * Write a description of class bridge here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class bridge
+{
+   public static void main(String[] args){
+       String line1 = "W";
+       String line2 = "7534K66K72QK953769t859QK8A4J54Q7AQt42A23At8JJ29t83J6";     
+       char[] lineArray = line2.toCharArray();
+       String Person1 = "";
+       String Person2 = "";
+       String Person3 = "";
+       String Person4 = "";
+       for (int i=0 ; i< lineArray.length; i+=4){
+           Person1 += lineArray[i];
+       }
+       for (int i=1 ; i< lineArray.length; i+=4){
+           Person2 += lineArray[i];
+       }
+       for (int i=2 ; i< lineArray.length; i+=4){
+           Person3 += lineArray[i];
+       }
+       for (int i=3 ; i< lineArray.length; i+=4){
+           Person4 += lineArray[i];         
+       }
+       if (line1 == "N"){
+           System.out.print("E ");
+           System.out.println(Person1);
+           System.out.print("S ");
+           System.out.println(Person2);
+           System.out.print("W ");
+           System.out.println(Person3);
+           System.out.print("N ");
+           System.out.println(Person4);
+       } else if(line1 == "E"){
+           System.out.print("S ");
+           System.out.println(Person1);
+           System.out.print("W ");
+           System.out.println(Person2);
+           System.out.print("N ");
+           System.out.println(Person3);
+           System.out.print("E ");
+           System.out.println(Person4);
+       } else if(line1 == "S"){
+           System.out.print("W ");
+           System.out.println(Person1);
+           System.out.print("N ");
+           System.out.println(Person2);
+           System.out.print("E ");
+           System.out.println(Person3);
+           System.out.print("S ");
+           System.out.println(Person4);
+       }else{
+           System.out.print("N ");
+           System.out.println(Person1);
+           System.out.print("E ");
+           System.out.println(Person2);
+           System.out.print("S ");
+           System.out.println(Person3);
+           System.out.print("W ");
+           System.out.println(Person4);
+       }
+       
+   }
+}
